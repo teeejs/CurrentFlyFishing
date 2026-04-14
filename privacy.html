@@ -15,12 +15,12 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 25, 2026</p>
+    <p class="updated">Last updated: April 14, 2026</p>
 
     <p><strong>Current</strong> ("the App") is a fishing conditions app developed by Terence James Smith. This policy describes how we handle your information.</p>
 
     <h2>The Short Version</h2>
-    <p>We don't collect your personal information. Your data stays on your device and in your private iCloud account. We don't run ads, we don't track you, and we don't sell data.</p>
+    <p>If you use the App without signing in, your data stays on your device and in your private iCloud account — we collect nothing. If you choose to create a free account (Sign In with Apple or Sign In with Google), your trip logs, favorites, preferences, and subscription status are synced to a private cloud database so they're available across devices and at current.fishing. Account creation is entirely optional. We don't run ads, we don't track you, and we don't sell data.</p>
 
     <h2>Information Stored on Your Device</h2>
     <p>The following data is created and stored locally on your device:</p>
@@ -32,8 +32,18 @@
     </ul>
     <p>Trip log photos are saved to the app's local storage on your device and are not uploaded to any server.</p>
 
+    <h2>Optional Account &amp; Cloud Sync</h2>
+    <p>If you sign in with Apple or Google, the following data is synced to a private cloud database (Supabase, hosted in the US) so it's available across devices and at current.fishing:</p>
+    <ul>
+        <li><strong>Trip logs</strong> — all fields except photos (photos remain on-device only)</li>
+        <li><strong>Favorites</strong> — your saved locations and any custom gauge or map pin settings</li>
+        <li><strong>Preferences</strong> — fishing style, home state, unit preference, water type settings</li>
+        <li><strong>Subscription status</strong> — whether your account has an active Pro subscription, so iOS subscribers are recognized on current.fishing and vice versa</li>
+    </ul>
+    <p>Your account is identified by a unique user ID provided by Apple or Google. For Sign In with Apple, Apple may share your name on first sign-in only. You can sign out at any time from Settings in the App, which stops all cloud sync and reverts to local-only storage. To request deletion of your cloud data, contact us at <a href="mailto:support@current.fishing">support@current.fishing</a>.</p>
+
     <h2>iCloud Sync</h2>
-    <p>If you have iCloud enabled, your trip logs sync to your <strong>private iCloud account</strong> via Apple CloudKit. This data is encrypted in transit and at rest by Apple. It is stored in your personal iCloud container — we cannot access it. You can disable iCloud sync in your device's Settings.</p>
+    <p>For users who have not signed in with Apple or Google, trip logs sync to your <strong>private iCloud account</strong> via Apple CloudKit. This data is encrypted in transit and at rest by Apple. It is stored in your personal iCloud container — we cannot access it. You can disable iCloud sync in your device's Settings. Once you sign in with Apple or Google, Supabase becomes the primary sync layer and CloudKit is no longer used for new data.</p>
 
     <h2>Location Data</h2>
     <p>The App requests location access ("when in use" only) to find nearby rivers and show local fishing conditions. Your location is used on-device to identify nearby water and is sent to weather and flow data services (described below) to retrieve local conditions. We do not store, log, or track your location history.</p>
@@ -55,24 +65,27 @@
         <li><strong>NOAA Tides &amp; Currents</strong> — tide predictions for coastal locations (public federal API, no authentication)</li>
         <li><strong>Anthropic Claude API</strong> — AI-generated fishing intelligence (hatch calendars, regulations, fly shop recommendations). Location name and coordinates are sent; no personal data is included. Requests are routed through a private proxy and responses are cached locally.</li>
         <li><strong>Fly shop RSS feeds</strong> — publicly available fishing reports from fly shop websites. Standard read-only HTTP requests with no user data transmitted.</li>
+        <li><strong>Supabase</strong> — cloud database for optional account sync (signed-in users only). Stores trip logs, favorites, preferences, and subscription status as described above. Hosted in the United States. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>.</li>
+        <li><strong>RevenueCat</strong> — subscription management for purchases made at current.fishing. Stores subscription status for web subscribers. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</li>
     </ul>
 
     <h2>Subscriptions</h2>
-    <p>Current Pro subscriptions are managed entirely by Apple through the App Store. We do not collect, process, or store any payment information. The App only checks your subscription entitlement status (active or inactive) via Apple's StoreKit framework.</p>
+    <p>Current Pro subscriptions purchased through the iOS App are managed entirely by Apple through the App Store. We do not collect, process, or store any payment information for iOS purchases. The App checks your subscription status via Apple's StoreKit framework and, for signed-in users, mirrors the result to Supabase so it's recognized on current.fishing.</p>
+    <p>Current Pro subscriptions purchased through <a href="https://current.fishing">current.fishing</a> are managed by RevenueCat and Stripe. Your subscription status is stored in our Supabase database and used to grant Pro access on both the website and the iOS app when you are signed in.</p>
 
     <h2>Analytics &amp; Advertising</h2>
     <p>The App does not include any analytics SDKs, advertising networks, or user tracking. We do not collect usage metrics, device identifiers, or behavioral data.</p>
 
     <h2>Data Sharing</h2>
-    <p>We do not sell, share, or transfer your data to third parties for any purpose. The only off-device data transmission is to the weather, flow, tide, and AI services described above, and to your private iCloud account if enabled.</p>
+    <p>We do not sell, share, or transfer your data to third parties for any purpose beyond what is described in this policy. Signed-in users' data is stored in Supabase solely to enable sync across devices and current.fishing. Unsigned users' data never leaves their device (other than iCloud, which is controlled by Apple).</p>
 
     <h2>Children's Privacy</h2>
-    <p>The App does not knowingly collect information from children under 13. The App does not require account creation or collect personal information.</p>
+    <p>The App does not knowingly collect information from children under 13. Account creation is optional and not required to use the App's core features.</p>
 
     <h2>Changes to This Policy</h2>
     <p>We may update this policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App after changes constitutes acceptance.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this privacy policy? Contact us at <a href="mailto:job-bolero.0s@icloud.com">job-bolero.0s@icloud.com</a>.</p>
+    <p>Questions about this privacy policy? Contact us at <a href="mailto:support@current.fishing">support@current.fishing</a>.</p>
 </body>
 </html>
